@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "setup": "npm install && npx prisma generate && npx prisma migrate dev",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:migrate": "docker-compose exec app npx prisma migrate dev"
+  }
+}

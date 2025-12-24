@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Store {
+  id       Int     @id @default(autoincrement())
+  name     String  @unique
+  address  String
+  logo     String?
+
+  books    StoreBook[]
+}
+
+model Book {
+  id       Int     @id @default(autoincrement())
+  name     String
+  pages    Int
+  authorId Int
+
+  author   Author  @relation(fields: [authorId], references: [id])
+  stores   StoreBook[]
+}
+
+model Author {
+  id     Int    @id @default(autoincrement())
+  name   String @unique
+
+  books  Book[]
+}
+
+model StoreBook {
+  storeId  Int
+  bookId   Int
+  price    Float
+  copies   Int     @default(1)
+  soldOut  Boolean @default(false)
+
+  store    Store @relation(fields: [storeId], references: [id])
+  book     Book  @relation(fields: [bookId], references: [id])
+
+  @@id([storeId, bookId])
+}

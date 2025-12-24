@@ -1,0 +1,16 @@
+store_name,store_address,book_name,pages,author_name,price,logo
+BookWorld,123 Main St,The Great Gatsby,180,F. Scott Fitzgerald,15.99,https://example.com/logo1.png
+BookWorld,123 Main St,1984,328,George Orwell,14.99,https://example.com/logo1.png
+BookWorld,123 Main St,Brave New World,268,Aldous Huxley,13.99,https://example.com/logo1.png
+BookWorld,123 Main St,Animal Farm,112,George Orwell,10.99,https://example.com/logo1.png
+BookWorld,123 Main St,Fahrenheit 451,249,Ray Bradbury,12.99,https://example.com/logo1.png
+ReadMore,456 Oak Ave,To Kill a Mockingbird,324,Harper Lee,16.99,https://example.com/logo2.png
+ReadMore,456 Oak Ave,Pride and Prejudice,432,Jane Austen,12.99,https://example.com/logo2.png
+ReadMore,456 Oak Ave,Emma,474,Jane Austen,14.99,https://example.com/logo2.png
+ReadMore,456 Oak Ave,Sense and Sensibility,409,Jane Austen,13.99,https://example.com/logo2.png
+ReadMore,456 Oak Ave,The Catcher in the Rye,234,J.D. Salinger,11.99,https://example.com/logo2.png
+Central Books,789 Pine Blvd,The Hobbit,310,J.R.R. Tolkien,18.99,https://example.com/logo3.png
+Central Books,789 Pine Blvd,The Lord of the Rings,1178,J.R.R. Tolkien,29.99,https://example.com/logo3.png
+Central Books,789 Pine Blvd,Harry Potter and the Sorcerer's Stone,309,J.K. Rowling,19.99,https://example.com/logo3.png
+Central Books,789 Pine Blvd,The Chronicles of Narnia,767,C.S. Lewis,24.99,https://example.com/logo3.png
+Central Books,789 Pine Blvd,Dune,688,Frank Herbert,22.99,https://example.com/logo3.png
