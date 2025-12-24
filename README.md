@@ -143,11 +143,6 @@ The application will be available at `http://localhost:3000`
 docker-compose down
 ```
 
-## Testing the API
-
-
-```
-
 ### Upload Sample CSV
 
 Create a file named `sample_inventory.csv`:
@@ -170,66 +165,6 @@ curl -X POST http://localhost:3000/api/inventory/upload \
 ```bash
 curl http://localhost:3000/api/store/1/download-report -o BookWorld-Report.pdf
 ```
-
-
-
-```
-bookstore-backend/
-├── src/
-│   ├── config/
-│   │   └── prisma.js              # Prisma client configuration
-│   ├── modules/
-│   │   ├── inventory/
-│   │   │   ├── presentation/
-│   │   │   │   ├── routes.js
-│   │   │   │   ├── controllers/
-│   │   │   │   │   └── inventory.controller.js
-│   │   │   │   └── validators/
-│   │   │   │       └── inventory.validation.js
-│   │   │   ├── services/
-│   │   │   │   ├── inventory.service.js
-│   │   │   │   └── validators/
-│   │   │   │       └── inventory_service.validation.js
-│   │   │   └── repository/
-│   │   │       └── inventory.repository.js
-│   │   ├── store/
-│   │   │   ├── presentation/
-│   │   │   │   ├── routes.js
-│   │   │   │   └── controllers/
-│   │   │   │       └── store.controller.js
-│   │   │   ├── services/
-│   │   │   │   ├── store.service.js
-│   │   │   │   └── validators/
-│   │   │   │       └── store_service.validation.js
-│   │   │   └── repository/
-│   │   │       └── store.repository.js
-│   │   └── shared/
-│   │       └── filters/
-│   │           └── global_error.filter.js
-│   └── index.js                    # Application entry point
-├── prisma/
-│   └── schema.prisma               # Database schema
-├── prisma.config.ts                # Prisma 7.x configuration
-├── .env                            # Environment variables
-├── .dockerignore
-├── Dockerfile
-├── docker-compose.yml
-├── package.json
-└── README.md
-```
-
-## Architecture
-
-The project follows a **layered architecture** pattern:
-
-1. **Presentation Layer** (`presentation/`): Routes, controllers, and input validation
-2. **Service Layer** (`services/`): Business logic and orchestration
-3. **Repository Layer** (`repository/`): Data access and database operations
-
-This separation ensures:
-- **Maintainability**: Clear separation of concerns
-- **Testability**: Each layer can be tested independently
-- **Scalability**: Easy to extend with new features
 
 ## Error Handling
 
